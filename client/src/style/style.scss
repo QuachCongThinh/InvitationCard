@@ -444,7 +444,7 @@ html {
     }
   }
   .event {
-    margin: 100px 0 50px 0;
+    margin: 100px 0 150px 0;
     h1 {
       font-size: 60px;
       font-weight: 500;
@@ -469,24 +469,99 @@ html {
         width: 380px;
         position: relative;
         height: 700px;
+
         max-width: 100%;
-        background-color: rgb(78, 106, 131);
-        box-shadow: rgba(11, 12, 12, 0.39) 0px 8px 24px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(11, 12, 12, 0.116) 0px 8px 24px;
         transition: 0.3s ease-in-out;
         &:hover {
           transform: translateY(-5px);
+        }
+        .thumb-male {
+          background-image: url("../assets/maleevent.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 100%;
+          height: 400px;
+        }
+        h1 {
+          font-family: var(--day-text);
+          font-size: 25px;
+          font-weight: bold;
+        }
+        p {
+          font-weight: 600;
+          color: #000;
+        }
+        h2 {
+          font-size: 22px;
+          text-align: center;
+          font-family: var(--day-text);
+          font-weight: 500;
+          color: rgba(63, 63, 63, 0.74);
+        }
+        button{
+          width: 200px;
+          height: 60px;
+          font-size: 18px;
+          font-family: var(--day-text);
+          margin: 20px 0 0 87px;
+          cursor: pointer;
+          background-color: rgb(238, 53, 53);
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          color: #fff;
         }
       }
       .event-female {
         width: 380px;
         position: relative;
         height: 700px;
-        background-color: rgb(78, 106, 131);
+        background-color: rgb(255, 255, 255);
         max-width: 100%;
-        box-shadow: rgba(11, 12, 12, 0.39) 0px 8px 24px;
+        box-shadow: rgba(11, 12, 12, 0.116) 0px 8px 24px;
         transition: 0.3s ease-in-out;
         &:hover {
           transform: translateY(-5px);
+        }
+        .thumb-female {
+          background-image: url("../assets/femaleevent.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 100%;
+          height: 400px;
+        }
+        h1 {
+          font-family: var(--day-text);
+          font-size: 25px;
+          font-weight: bold;
+        }
+        p {
+          font-weight: 600;
+          color: #000;
+        }
+        h2 {
+          font-size: 22px;
+          text-align: center;
+          font-family: var(--day-text);
+          font-weight: 500;
+          color: rgba(63, 63, 63, 0.74);
+        }
+        button{
+          width: 200px;
+          height: 60px;
+          font-size: 18px;
+          font-family: var(--day-text);
+          margin: 20px 0 0 87px;
+          cursor: pointer;
+          background-color: rgb(238, 53, 53);
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          color: #fff;
         }
       }
     }
