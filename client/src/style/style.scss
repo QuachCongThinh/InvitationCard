@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playball&family=Quicksand:wght@300..700&display=swap");
+:root {
+  --second-font: "Comfortaa", sans-serif;
+  --text-font: "Josefin Sans", sans-serif;
+  --text-slide: "Amatic SC", sans-serif;
+  --main-text: "Playball", cursive;
+  --day-text: "Quicksand", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+#container {
+  position: relative;
+  z-index: 0;
+  .header {
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
+    background-image: url("../assets/stitch-disney-3840x2160-10901.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    .overlay {
+      z-index: -1;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.116);
+      transition: transform 0.3s ease-out;
+    }
+
+    .title {
+      padding: 10px 0;
+      width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left {
+        h1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span {
+            font-family: var(--font-family);
+            font-size: 38px;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+            transition: 0.3s ease-in-out;
+            &:first-child {
+              animation: leftToRight 1s ease-in-out;
+            }
+            @keyframes leftToRight {
+              0% {
+                opacity: 0;
+                transform: translateX(-300px);
+              }
+              100% {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+            &:last-child {
+              animation: rightToLeft 1s ease-in-out;
+            }
+            @keyframes rightToLeft {
+              0% {
+                opacity: 0;
+                transform: translateX(300px);
+              }
+              100% {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+          }
+        }
+        svg {
+          padding: 0 20px;
+          font-size: 32px;
+          transition: 3s ease-in-out;
+          color: #ff3935;
+          position: relative;
+          z-index: 1;
+          animation: 2s linear 3s infinite alternate fadeInTitle;
+          @keyframes fadeInTitle {
+            0% {
+              transform: scale(0.9);
+            }
+            100% {
+              transform: scale(1.2);
+            }
+          }
+        }
+        p {
+          font-family: var(--second-font);
+          font-size: 17px;
+          text-align: center;
+          color: #ffffff;
+          font-weight: 300;
+          position: relative;
+          transition: 0.3s ease-in-out;
+          animation: botToTop 1s ease-in-out;
+          @keyframes botToTop {
+            0% {
+              opacity: 0;
+              transform: translateY(100px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 1px;
+            top: 12px;
+            margin-left: -50px;
+            background-color: #ece9e9;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 35px;
+            top: 12px;
+            margin-left: 10px;
+            height: 1px;
+            background-color: #ece9e9;
+          }
+        }
+      }
+      .right {
+        position: relative;
+        z-index: 10;
+        .nav {
+          ul {
+            display: flex;
+            li {
+              list-style: none;
+              padding: 0 12px;
+              transition: 0.3s ease-in-out;
+              a {
+                position: relative;
+                z-index: 10;
+                font-size: 19px;
+                text-decoration: none;
+                color: #fff;
+                font-weight: 700;
+                font-family: var(--text-font);
+                cursor: pointer;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  bottom: -5px;
+                  width: 0;
+                  height: 2px;
+                  background-color: #fff;
+                  transition: width 0.3s ease-in-out;
+                }
+              }
+              &:hover a::after {
+                width: 100%;
+              }
+              &:hover {
+                transform: translateY(-3px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .text-header {
+      h1 {
+        font-family: var(--text-slide);
+        font-size: 170px;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transition: transform 0.3s ease-out;
+        color: #ffff;
+        text-align: center;
+        position: absolute;
+        top: 450px;
+        &.parallax {
+          .overlay {
+            transform: translateY(0);
+          }
+          &.scrolling {
+            .overlay {
+              transform: translateY(50px);
+            }
+          }
+        }
+      }
+      .name {
+        display: flex;
+        justify-content: center;
+        .name-header {
+          margin-top: 100px;
+          span {
+            font-size: 60px;
+            font-weight: 400;
+            font-family: var(--main-text);
+          }
+          svg {
+            padding: 0 20px;
+            font-size: 32px;
+            transition: 3s ease-in-out;
+            color: #ff3935;
+            position: relative;
+            z-index: 1;
+            animation: 2s linear 3s infinite alternate fadeInHeader;
+            @keyframes fadeInCouple {
+              0% {
+                transform: scale(0.9);
+              }
+              100% {
+                transform: scale(1.2);
+              }
+            }
+          }
+          p {
+            margin-top: -10px;
+            font-size: 25px;
+            font-family: var(--day-text);
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .couple-title {
+    margin: 100px 0 50px 0;
+    h1 {
+      font-size: 60px;
+      font-weight: 500;
+      text-align: center;
+      font-family: var(--main-text);
+      margin-bottom: -10px;
+    }
+    p {
+      font-family: var(--day-text);
+      font-size: 22px;
+      line-height: 1.5;
+      color: #767878;
+      text-align: center;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 1300px;
+      margin: 0 auto;
+      padding: 110px 0;
+      .male {
+        img {
+          width: 500px;
+          height: 500px;
+          border-radius: 50%;
+          border: 4px solid rgb(253, 107, 107);
+        }
+        p {
+          font-weight: bold;
+          color: #000;
+          font-size: 32px;
+        }
+        h2 {
+          color: #767878;
+          font-family: var(--day-text);
+          font-weight: 300;
+          text-align: center;
+          line-height: 15px;
+        }
+        h3 {
+          color: #5a5a5a;
+          font-family: var(--day-text);
+          font-weight: 500;
+          font-size: 20px;
+          text-align: center;
+          line-height: 15px;
+          margin-top: 4px;
+        }
+      }
+      svg {
+        padding: 0 20px;
+        font-size: 32px;
+        transition: 3s ease-in-out;
+        color: #ff3935;
+        position: relative;
+        z-index: 1;
+        animation: 2s linear 2s infinite alternate fadeInCouple;
+        @keyframes fadeInCouple {
+          0% {
+            transform: scale(2.8);
+          }
+          100% {
+            transform: scale(3);
+          }
+        }
+      }
+      .female {
+        img {
+          width: 500px;
+          height: 500px;
+          border: 4px solid rgb(253, 107, 107);
+          border-radius: 50%;
+        }
+        p {
+          font-weight: bold;
+          color: #000;
+          font-size: 32px;
+        }
+        h2 {
+          color: #767878;
+          font-family: var(--day-text);
+          text-align: center;
+          line-height: 15px;
+          font-weight: 300;
+        }
+        h3 {
+          color: #5a5a5a;
+          font-family: var(--day-text);
+          font-weight: 500;
+          font-size: 20px;
+          text-align: center;
+          margin-top: 4px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+  .btn-custom {
+    max-width: 100%;
+    background-color: #ffa9b767;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    button {
+      width: 250px;
+      height: 70px;
+      border: none;
+      font-family: var(--text-font);
+      font-weight: 500;
+      font-size: 18px;
+      color: #fff;
+      outline: none;
+      background-color: rgb(231, 67, 67);
+      cursor: pointer;
+      padding-left: 20px;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: #fff;
+        background-color: #f32c1e;
+      }
+      svg {
+        position: absolute;
+        margin-left: -25px;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover svg {
+        transform: translateX(-3px);
+      }
+    }
+  }
+  .countDown {
+    max-width: 100%;
+    width: 100%;
+    height: 600px;
+    background-image: url("../assets/bg_countdown.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .background {
+      text-align: center;
+      padding-top: 100px;
+      .top {
+        h1 {
+          font-family: var(--main-text);
+          font-size: 65px;
+          font-weight: 400;
+        }
+        span {
+          font-family: var(--main-text);
+          font-size: 50px;
+          font-weight: 400;
+          line-height: 10px;
+        }
+        p {
+          margin-top: 40px;
+          font-family: var(--day-text);
+          font-size: 22px;
+          font-weight: 400;
+        }
+      }
+      .countdown-timer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 40px;
+
+        .time-box {
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 10px;
+          padding: 20px;
+          text-align: center;
+          width: 100px;
+
+          span {
+            font-size: 36px;
+            font-family: var(--main-text);
+            color: #000000;
+            display: block;
+          }
+
+          p {
+            font-family: var(--day-text);
+            font-size: 16px;
+            color: #000000;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+  .event {
+    margin: 100px 0 50px 0;
+    h1 {
+      font-size: 60px;
+      font-weight: 500;
+      text-align: center;
+      font-family: var(--main-text);
+      margin-bottom: -10px;
+    }
+    p {
+      font-family: var(--day-text);
+      font-size: 22px;
+      line-height: 1.5;
+      color: #767878;
+      text-align: center;
+    }
+    .event-wedding {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+      margin-top: 100px;
+      .event-male {
+        width: 380px;
+        position: relative;
+        height: 700px;
+        max-width: 100%;
+        background-color: rgb(78, 106, 131);
+        box-shadow: rgba(11, 12, 12, 0.39) 0px 8px 24px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+      .event-female {
+        width: 380px;
+        position: relative;
+        height: 700px;
+        background-color: rgb(78, 106, 131);
+        max-width: 100%;
+        box-shadow: rgba(11, 12, 12, 0.39) 0px 8px 24px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}

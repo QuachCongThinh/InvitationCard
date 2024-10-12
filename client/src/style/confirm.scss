@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --text-font: "Josefin Sans", sans-serif;
+  --font-family: "Unica One", sans-serif;
+  --font-second: "Protest Strike", sans-serif;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titleForm {
+  max-width: 100%;
+  height: 470px;
+  background-color: #e9ecef;
+  padding: 20px 0px;
+  .avatar {
+    padding: 6px;
+    border-radius: 50%;
+    max-width: 100%;
+    margin: 0 auto;
+    img {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 270px;
+      height: auto;
+      max-width: 100%;
+      max-width: 100%;
+      border-radius: 50%;
+    }
+  }
+  .text {
+    text-align: center;
+    .textConfirm {
+      font-size: 35px;
+      font-weight: 700;
+      font-family: var(--font-second);
+      margin-bottom: -15px;
+      margin-top: 15px;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 28px;
+      font-family: var(--text-font);
+      font-weight: 300;
+    }
+    .name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        font-family: var(--font-family);
+        font-size: 40px;
+        font-weight: 700;
+      }
+      svg {
+        padding: 0 20px;
+        color: red;
+        font-size: 30px;
+        transition: 3s linear infinite;
+        animation: 2s linear 3s infinite alternate slidein;
+        @keyframes slidein {
+          0% {
+            transform: scale(1.2);
+          }
+          100% {
+            transform: scale(1.5);
+          }
+        }
+        &:last-of-type {
+          position: absolute;
+          margin-left: 40px;
+          font-size: 25;
+          color: #fd9b9b;
+          transform: rotate(45deg);
+          transition: 3s linear infinite;
+          animation: 3s linear 3s infinite alternate slidein2;
+          @keyframes slidein2 {
+            0% {
+              transform: scale(0.7);
+            }
+            100% {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.form {
+  text-align: center;
+  h2 {
+    font-family: var(--text-font);
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: -20px;
+  }
+  h4 {
+    font-family: var(--text-font);
+
+    font-size: 20px;
+    color: #555555;
+    font-weight: 300;
+  }
+  form {
+    label {
+      display: block;
+      input {
+        width: 500px;
+        font-size: 20px;
+        font-family: var(--text-font);
+        padding: 5px 20px;
+        text-align: center;
+        height: 60px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 5px;
+      }
+    }
+    button {
+      margin-top: 40px;
+      width: 500px;
+      height: 60px;
+      padding: 5px 20px;
+      background-color: rgb(255, 108, 108);
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      font-family: var(--text-font);
+
+      &:hover {
+        background-color: rgb(255, 59, 59);
+      }
+    }
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      color: #555555;
+      transition: 0.3s ease-in-out;
+      text-align: center;
+      margin-top: 50px;
+      font-family: var(--text-font);
+      font-size: 20px;
+      text-decoration: none;
+      &:hover {
+        color: #ff4848;
+      }
+    }
+  }
+}
