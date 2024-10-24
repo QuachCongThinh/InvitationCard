@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playball&family=Quicksand:wght@300..700&display=swap");
+:root {
+  --second-font: "Comfortaa", sans-serif;
+  --text-font: "Josefin Sans", sans-serif;
+  --text-slide: "Amatic SC", sans-serif;
+  --main-text: "Playball", cursive;
+  --day-text: "Quicksand", sans-serif;
+}
+
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.685);
+  }
+  .box-content {
+    border-radius: 8px;
+    max-width: 100%;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    background: white;
+    z-index: 1001;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+
+    &.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .close-btn {
+      position: absolute;
+      top: 28px;
+      right: 18px;
+      background: none;
+      color: #fff;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .box-top {
+      max-width: 100%;
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+      height: 80px;
+      background-color: #ed4b4b;
+      h2 {
+        svg {
+          margin-right: 10px;
+        }
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 33px;
+        font-weight: bold;
+        padding: 20px 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: var(--day-text);
+      }
+    }
+    .box-bottom {
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      position: relative;
+      .left {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        .boxQR {
+          width: 350px;
+          height: 450px;
+          border-radius: 7px;
+          border: 3px solid #ed4b4b;
+          p {
+            font-family: var(--text-font);
+            font-size: 20px;
+            margin: 15px 10px;
+            font-weight: 700;
+            color: rgb(8, 25, 39);
+          }
+          img {
+            width: 240px;
+            height: 240px;
+          }
+        }
+      }
+      .right {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        right: 30px;
+        .boxQR {
+          width: 350px;
+          height: 450px;
+          border-radius: 7px;
+          border: 3px solid #ed4b4b;
+          p {
+            font-family: var(--text-font);
+            font-size: 20px;
+            margin: 15px 10px;
+            font-weight: 700;
+            color: rgb(8, 25, 39);
+          }
+          img {
+            width: 240px;
+            height: 240px;
+          }
+        }
+      }
+    }
+  }
+}

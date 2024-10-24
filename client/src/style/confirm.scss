@@ -1,17 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playball&family=Quicksand:wght@300..700&display=swap");
 
 :root {
   --text-font: "Josefin Sans", sans-serif;
   --font-family: "Unica One", sans-serif;
   --font-second: "Protest Strike", sans-serif;
+  --day-text: "Quicksand", sans-serif;
 }
 body,
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .titleForm {
@@ -19,6 +22,9 @@ html {
   height: 470px;
   background-color: #e9ecef;
   padding: 20px 0px;
+  @media screen and (max-width: 425px) and (min-width: 376px) {
+    height: 452px;
+  }
   .avatar {
     padding: 6px;
     border-radius: 50%;
@@ -45,23 +51,30 @@ html {
       margin-bottom: -15px;
       margin-top: 15px;
       letter-spacing: 2px;
+      @media (max-width: 425px) {
+        font-size: 30px;
+        margin-bottom: -5px;
+      }
     }
     p {
       font-size: 28px;
       font-family: var(--text-font);
       font-weight: 300;
+      @media (max-width: 425px) {
+        font-size: 22px;
+      }
     }
     .name {
       display: flex;
       align-items: center;
       justify-content: center;
       span {
-        font-family: var(--font-family);
+        font-family: var(--day-text);
         font-size: 40px;
         font-weight: 700;
       }
       svg {
-        padding: 0 20px;
+        padding: 0 30px;
         color: red;
         font-size: 30px;
         transition: 3s linear infinite;
@@ -102,6 +115,9 @@ html {
     font-size: 30px;
     font-weight: 400;
     margin-bottom: -20px;
+    @media screen and (max-width: 425px) and (min-width: 376px) {
+      font-size: 25px;
+    }
   }
   h4 {
     font-family: var(--text-font);
@@ -122,6 +138,13 @@ html {
         height: 60px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 5px;
+        @media screen and (max-width: 425px) and (min-width: 376px) {
+          width: 290px;
+          font-size: 17px;
+          padding: 0px 21px;
+          height: 49px;
+          border: none;
+        }
       }
     }
     button {
@@ -138,7 +161,11 @@ html {
       border: none;
       outline: none;
       font-family: var(--text-font);
-
+      @media screen and (max-width: 425px) and (min-width: 376px) {
+        width: 370px;
+        height: 47px;
+        font-size: 19px;
+      }
       &:hover {
         background-color: rgb(255, 59, 59);
       }

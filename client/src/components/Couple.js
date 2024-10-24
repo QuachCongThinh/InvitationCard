@@ -1,6 +1,6 @@
 import { FaHeart } from "react-icons/fa";
-import male from "../assets/male.jpg";
-import female from "../assets/female.jpg";
+import male from "../assets/image/male.jpg";
+import female from "../assets/image/female.jpg";
 
 const Couple = () => {
   return (

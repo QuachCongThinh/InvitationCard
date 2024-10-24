@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../style/confirm.scss";
-import avt from "../assets/avatar-vo-tri-meo-2.jpg";
+import avt from "../assets/image/avatar-vo-tri-meo-2.jpg";
 import { FaHeart } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -23,6 +23,7 @@ const Confirm = () => {
     try {
       const response = await fetch("http://localhost:5000/api/rsvp", {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
