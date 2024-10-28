@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const targetDate = new Date("1 January, 2025 00:00:00").getTime();
+const targetDate = new Date("29 January, 2025 00:00:00").getTime();
 
 const calculateTimeLeft = () => {
   const now = new Date().getTime();
@@ -37,7 +37,7 @@ const CountDown = () => {
       <div className="background">
         <div className="top">
           <h1>Ngày quan trọng của tụi mình</h1>
-          <span>1 January 2025</span>
+          <span>29 January 2025</span>
           <p>
             Chúng tôi rất vui mừng được kỷ niệm ngày đặc biệt của mình với gia
             đình và bạn bè. Cảm ơn bạn rất nhiều vì đã ghé thăm trang web đám

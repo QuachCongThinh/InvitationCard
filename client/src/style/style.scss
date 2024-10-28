@@ -47,8 +47,11 @@ html {
       opacity: 1;
       transform: translateY(0);
     }
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
       left: 360px;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      left: 310px;
     }
   }
   .header {
@@ -79,7 +82,6 @@ html {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       .left {
         h1 {
           display: flex;
@@ -123,13 +125,18 @@ html {
                 transform: translateX(0);
               }
             }
-
-            @media screen and (max-width: 425px) and (min-width: 376px) {
+            @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
               font-size: 27px;
+            }
+            @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+              font-size: 25px;
             }
           }
 
-          @media screen and (max-width: 425px) and (min-width: 376px) {
+          @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+            margin-left: 30px;
+          }
+          @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
             margin-left: 30px;
           }
         }
@@ -152,7 +159,11 @@ html {
             }
           }
 
-          @media screen and (max-width: 425px) and (min-width: 376px) {
+          @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+            font-size: 27px;
+            padding: 0 10px;
+          }
+          @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
             font-size: 27px;
             padding: 0 10px;
           }
@@ -179,7 +190,10 @@ html {
             }
           }
 
-          @media screen and (max-width: 425px) and (min-width: 376px) {
+          @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+            display: none;
+          }
+          @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
             display: none;
           }
 
@@ -216,7 +230,7 @@ html {
           cursor: pointer;
 
           span {
-            background-color: #c78383;
+            background-color: #4b3030;
             border-radius: 2px;
             display: block;
             margin: 4px 0;
@@ -224,7 +238,10 @@ html {
             height: 4px;
             transition: all 0.3s ease;
           }
-          @media screen and (max-width: 425px) and (min-width: 376px) {
+          @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+            display: block;
+          }
+          @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
             display: block;
           }
         }
@@ -234,8 +251,6 @@ html {
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: transform 0.3s ease-in-out;
-
           ul {
             display: flex;
 
@@ -245,7 +260,6 @@ html {
 
               a {
                 position: relative;
-                z-index: 10;
                 font-size: 16px;
                 text-decoration: none;
                 color: #fff;
@@ -263,7 +277,10 @@ html {
                   background-color: #fff;
                   transition: width 0.3s ease-in-out;
                 }
-                @media screen and (max-width: 425px) and (min-width: 376px) {
+                @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+                  color: #000;
+                }
+                @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
                   color: #000;
                 }
               }
@@ -275,11 +292,19 @@ html {
                   width: 100%;
                 }
               }
-              @media screen and (max-width: 425px) and (min-width: 376px) {
+              @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+                padding: 15px 0;
+              }
+              @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
                 padding: 15px 0;
               }
             }
-            @media screen and (max-width: 425px) and (min-width: 376px) {
+            @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+              display: block;
+              text-align: center;
+              margin-right: 40px;
+            }
+            @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
               display: block;
               text-align: center;
               margin-right: 40px;
@@ -290,17 +315,28 @@ html {
             transform: translateX(0);
           }
 
-          @media screen and (max-width: 425px) and (min-width: 376px) {
+          @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
             position: fixed;
             top: 30%;
             right: 0px;
-            width: 70%;
+            width: 50%;
             height: 30vh;
             border-radius: 20px 0 0 20px;
             background: linear-gradient(225deg, #ffffff, #f0f0f0);
             box-shadow: -5px 5px 10px #8f8f8f8f, 5px -5px 10px #c0c0c0b0;
             transition: transform 0.3s ease-in-out;
-            z-index: 100000;
+            transform: translateX(200%);
+          }
+          @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+            position: fixed;
+            top: 30%;
+            right: 0px;
+            width: 50%;
+            height: 30vh;
+            border-radius: 20px 0 0 20px;
+            background: linear-gradient(225deg, #ffffff, #f0f0f0);
+            box-shadow: -5px 5px 10px #8f8f8f8f, 5px -5px 10px #c0c0c0b0;
+            transition: transform 0.3s ease-in-out;
             transform: translateX(200%);
           }
         }
@@ -309,12 +345,18 @@ html {
           transform: translateX(0);
         }
 
-        @media screen and (max-width: 425px) and (min-width: 376px) {
-          left: 260px;
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+          left: 268px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          left: 218px;
         }
       }
 
-      @media screen and (max-width: 425px) and (min-width: 376px) {
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        justify-content: start;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
         justify-content: start;
       }
     }
@@ -342,7 +384,10 @@ html {
           }
         }
       }
-      @media screen and (max-width: 425px) and (min-width: 376px) {
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        font-size: 90px;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
         font-size: 90px;
       }
     }
@@ -355,7 +400,10 @@ html {
           font-size: 55px;
           font-weight: 400;
           font-family: var(--main-text);
-          @media screen and (max-width: 425px) and (min-width: 376px) {
+          @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+            font-size: 42px;
+          }
+          @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
             font-size: 42px;
           }
         }
@@ -383,15 +431,27 @@ html {
           font-optical-sizing: auto;
           font-style: normal;
           font-weight: 400;
-          @media screen and (max-width: 425px) and (min-width: 376px) {
+          @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+            margin-top: 0px;
+          }
+          @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
             margin-top: 0px;
           }
         }
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+          margin-top: 70px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           margin-top: 70px;
         }
       }
     }
+  }
+  @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+    z-index: 0;
+  }
+  @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+    z-index: 0;
   }
 }
 .couple-title {
@@ -405,8 +465,15 @@ html {
     text-align: center;
     font-family: var(--main-text);
     margin-bottom: -10px;
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
       font-size: 40px;
+      position: relative;
+      z-index: -10;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      font-size: 40px;
+      position: relative;
+      z-index: -10;
     }
   }
   p {
@@ -415,9 +482,17 @@ html {
     line-height: 1.5;
     color: #767878;
     text-align: center;
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
       font-size: 16px;
       padding: 0 20px;
+      position: relative;
+      z-index: -10;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      font-size: 16px;
+      padding: 0 20px;
+      position: relative;
+      z-index: -10;
     }
   }
   .row {
@@ -433,17 +508,32 @@ html {
         height: 400px;
         border-radius: 50%;
         border: 4px solid rgb(253, 107, 107);
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           width: 280px;
           height: 280px;
+          position: relative;
+          z-index: -10;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          width: 280px;
+          height: 280px;
+          position: relative;
+          z-index: -10;
         }
       }
       p {
         font-weight: bold;
         color: #000;
         font-size: 32px;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 28px;
+          position: relative;
+          z-index: -10;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 28px;
+          position: relative;
+          z-index: -10;
         }
       }
       h2 {
@@ -452,8 +542,15 @@ html {
         font-weight: 300;
         text-align: center;
         line-height: 15px;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 18px;
+          position: relative;
+          z-index: -10;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 18px;
+          position: relative;
+          z-index: -10;
         }
       }
       h3 {
@@ -464,8 +561,15 @@ html {
         text-align: center;
         line-height: 15px;
         margin-top: 4px;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 18px;
+          position: relative;
+          z-index: -10;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 18px;
+          position: relative;
+          z-index: -10;
         }
       }
     }
@@ -475,7 +579,6 @@ html {
       transition: 3s ease-in-out;
       color: #ff3935;
       position: relative;
-      z-index: 1;
       animation: 2s linear 2s infinite alternate fadeInCouple;
       @keyframes fadeInCouple {
         0% {
@@ -485,10 +588,17 @@ html {
           transform: scale(3);
         }
       }
-      @media screen and (max-width: 425px) and (min-width: 376px) {
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
         font-size: 16px;
         margin-left: 134px;
         padding: 35px 0;
+        z-index: -10;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        font-size: 16px;
+        margin-left: 134px;
+        padding: 35px 0;
+        z-index: -10;
       }
     }
     .female {
@@ -497,17 +607,32 @@ html {
         height: 400px;
         border-radius: 50%;
         border: 4px solid rgb(253, 107, 107);
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           width: 280px;
           height: 280px;
+          position: relative;
+          z-index: -10;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          width: 280px;
+          height: 280px;
+          position: relative;
+          z-index: -10;
         }
       }
       p {
         font-weight: bold;
         color: #000;
         font-size: 32px;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 28px;
+          position: relative;
+          z-index: -10;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 28px;
+          position: relative;
+          z-index: -10;
         }
       }
       h2 {
@@ -516,8 +641,15 @@ html {
         text-align: center;
         line-height: 15px;
         font-weight: 300;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 18px;
+          position: relative;
+          z-index: -10;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 18px;
+          position: relative;
+          z-index: -10;
         }
       }
       h3 {
@@ -528,12 +660,28 @@ html {
         text-align: center;
         margin-top: 4px;
         line-height: 15px;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 18px;
+          position: relative;
+          z-index: -10;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 18px;
+          position: relative;
+          z-index: -10;
         }
       }
     }
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+      display: grid;
+      justify-content: start;
+      position: relative;
+      right: 140px;
+      width: 0;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
       display: grid;
       justify-content: start;
       position: relative;
@@ -583,17 +731,33 @@ html {
       &:hover svg {
         transform: translateX(-3px);
       }
-      @media screen and (max-width: 425px) and (min-width: 376px) {
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
         position: relative;
         left: 62px;
         height: 60px;
         width: 300px;
+        z-index: 1000;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        position: relative;
+        left: 40px;
+        height: 60px;
+        width: 300px;
+        z-index: 1000;
       }
     }
   }
-  @media screen and (max-width: 425px) and (min-width: 376px) {
+  @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    position: relative;
+    z-index: -3;
+  }
+  @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+    z-index: -3;
   }
 }
 .countDown {
@@ -605,8 +769,15 @@ html {
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   background-size: cover;
-  @media screen and (max-width: 425px) and (min-width: 376px) {
+  @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
     height: 480px;
+    position: relative;
+    z-index: -10;
+  }
+  @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+    height: 480px;
+    position: relative;
+    z-index: -10;
   }
   .background {
     text-align: center;
@@ -616,8 +787,12 @@ html {
         font-family: var(--main-text);
         font-size: 60px;
         font-weight: 400;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 32px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 30px;
+          padding: 0 20px;
         }
       }
       span {
@@ -625,8 +800,11 @@ html {
         font-size: 47px;
         font-weight: 400;
         line-height: 10px;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 30px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 28px;
         }
       }
       p {
@@ -634,8 +812,15 @@ html {
         font-family: var(--day-text);
         font-size: 22px;
         font-weight: 400;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 18px;
+          width: 350px;
+          max-width: 100%;
+          margin: 0 auto;
+          padding-top: 20px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 16px;
           width: 350px;
           max-width: 100%;
           margin: 0 auto;
@@ -702,7 +887,10 @@ html {
     .roseRight.open {
       transform: scale(1) skewX(0deg) translate(0px, 0px);
     }
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+      display: none;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
       display: none;
     }
   }
@@ -712,7 +900,10 @@ html {
     text-align: center;
     font-family: var(--main-text);
     margin-bottom: -10px;
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+      font-size: 40px;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
       font-size: 40px;
     }
   }
@@ -722,7 +913,11 @@ html {
     line-height: 1.5;
     color: #767878;
     text-align: center;
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+      font-size: 16px;
+      padding: 0 20px;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
       font-size: 16px;
       padding: 0 20px;
     }
@@ -749,7 +944,10 @@ html {
         border-radius: 8px 8px 0 0;
         width: 100%;
         height: 400px;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+          height: 300px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           height: 300px;
         }
       }
@@ -782,12 +980,20 @@ html {
         outline: none;
         border-radius: 5px;
         color: #fff;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+          height: 40px;
+          margin: 0px 0 0 50px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           height: 40px;
           margin: 0px 0 0 50px;
         }
       }
-      @media screen and (max-width: 425px) and (min-width: 376px) {
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        width: 300px;
+        height: 500px;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
         width: 300px;
         height: 500px;
       }
@@ -800,9 +1006,6 @@ html {
       background-color: rgb(255, 255, 255);
       max-width: 100%;
       box-shadow: rgba(11, 12, 12, 0.116) 0px 8px 24px;
-      @media screen and (max-width: 425px) and (min-width: 376px) {
-        height: 500px;
-      }
       .thumb-female {
         background-image: url("../assets/image/femaleevent.jpg");
         background-repeat: no-repeat;
@@ -811,7 +1014,10 @@ html {
         background-size: cover;
         width: 100%;
         height: 400px;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+          height: 300px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           height: 300px;
         }
       }
@@ -843,19 +1049,38 @@ html {
         outline: none;
         border-radius: 5px;
         color: #fff;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+          margin: 0px 0 0 50px;
+          height: 40px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           margin: 0px 0 0 50px;
           height: 40px;
         }
       }
-      @media screen and (max-width: 425px) and (min-width: 376px) {
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
         width: 300px;
         height: 500px;
+        margin-top: -30px;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        width: 300px;
+        height: 500px;
+        margin-top: -30px;
       }
     }
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
       display: grid;
     }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      display: grid;
+    }
+  }
+  @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+    z-index: -10;
+  }
+  @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+    z-index: -10;
   }
 }
 .video {
@@ -876,10 +1101,12 @@ html {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
       width: 100%;
     }
-
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      width: 100%;
+    }
     h1 {
       font-size: 48px;
       font-weight: 500;
@@ -893,6 +1120,14 @@ html {
       font-size: 22px;
       line-height: 1.5;
       color: #ffffff;
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        font-size: 18px;
+        padding: 0 20px;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        font-size: 18px;
+        padding: 0 20px;
+      }
     }
 
     .play-button {
@@ -946,6 +1181,12 @@ html {
       height: auto;
     }
   }
+  @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+    z-index: -10;
+  }
+  @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+    z-index: -10;
+  }
 }
 
 .album-section {
@@ -957,7 +1198,10 @@ html {
     text-align: center;
     font-family: var(--main-text);
     margin-bottom: -10px;
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+      font-size: 35px;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
       font-size: 35px;
     }
   }
@@ -967,7 +1211,10 @@ html {
     line-height: 1.5;
     color: #767878;
     text-align: center;
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+      font-size: 16px;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
       font-size: 16px;
     }
   }
@@ -993,5 +1240,23 @@ html {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       }
     }
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: -60px;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: -60px;
+    }
+  }
+  @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+    padding: 0 25px;
+    z-index: -10;
+    position: relative;
+  }
+  @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+    padding: 0 25px;
+    z-index: -10;
+    position: relative;
   }
 }

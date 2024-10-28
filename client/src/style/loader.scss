@@ -20,8 +20,11 @@ html {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    @media screen and (max-width: 425px) and (min-width: 376px) {
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
       top: 400px;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      top: 370px;
     }
   }
   .loader::after,

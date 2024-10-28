@@ -22,9 +22,6 @@ html {
   height: 470px;
   background-color: #e9ecef;
   padding: 20px 0px;
-  @media screen and (max-width: 425px) and (min-width: 376px) {
-    height: 452px;
-  }
   .avatar {
     padding: 6px;
     border-radius: 50%;
@@ -38,8 +35,10 @@ html {
       width: 270px;
       height: auto;
       max-width: 100%;
-      max-width: 100%;
       border-radius: 50%;
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        width: 260px;
+      }
     }
   }
   .text {
@@ -51,8 +50,12 @@ html {
       margin-bottom: -15px;
       margin-top: 15px;
       letter-spacing: 2px;
-      @media (max-width: 425px) {
-        font-size: 30px;
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        font-size: 25px;
+        margin-bottom: -5px;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        font-size: 25px;
         margin-bottom: -5px;
       }
     }
@@ -60,8 +63,11 @@ html {
       font-size: 28px;
       font-family: var(--text-font);
       font-weight: 300;
-      @media (max-width: 425px) {
-        font-size: 22px;
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        font-size: 18px;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        font-size: 20px;
       }
     }
     .name {
@@ -72,6 +78,9 @@ html {
         font-family: var(--day-text);
         font-size: 40px;
         font-weight: 700;
+        @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+          font-size: 36px;
+        }
       }
       svg {
         padding: 0 30px;
@@ -107,6 +116,12 @@ html {
       }
     }
   }
+  @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+    height: 420px;
+  }
+  @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+    height: 440px;
+  }
 }
 .form {
   text-align: center;
@@ -115,13 +130,15 @@ html {
     font-size: 30px;
     font-weight: 400;
     margin-bottom: -20px;
-    @media screen and (max-width: 425px) and (min-width: 376px) {
-      font-size: 25px;
+    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+      font-size: 22px;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      font-size: 23px;
     }
   }
   h4 {
     font-family: var(--text-font);
-
     font-size: 20px;
     color: #555555;
     font-weight: 300;
@@ -138,8 +155,15 @@ html {
         height: 60px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 5px;
-        @media screen and (max-width: 425px) and (min-width: 376px) {
-          width: 290px;
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+          width: 280px;
+          font-size: 17px;
+          padding: 0px 21px;
+          height: 49px;
+          border: none;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          width: 250px;
           font-size: 17px;
           padding: 0px 21px;
           height: 49px;
@@ -161,8 +185,13 @@ html {
       border: none;
       outline: none;
       font-family: var(--text-font);
-      @media screen and (max-width: 425px) and (min-width: 376px) {
-        width: 370px;
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        width: 270px;
+        height: 47px;
+        font-size: 19px;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        width: 290px;
         height: 47px;
         font-size: 19px;
       }
