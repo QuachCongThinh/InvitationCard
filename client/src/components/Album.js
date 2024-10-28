@@ -17,27 +17,29 @@ const Album = () => {
   }, []);
 
   useEffect(() => {
+    const currentImageRefs = [...imageRefs.current];
+
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const imgIndex = entry.target.getAttribute("data-index");
             setVisibleImages((prev) => [...prev, imgIndex]);
-            observer.unobserve(entry.target); 
+            observer.unobserve(entry.target);
           }
         });
       },
       {
-        rootMargin: "100px", 
+        rootMargin: "100px",
       }
     );
 
-    imageRefs.current.forEach((img) => {
+    currentImageRefs.forEach((img) => {
       if (img) observer.observe(img);
     });
 
     return () => {
-      imageRefs.current.forEach((img) => {
+      currentImageRefs.forEach((img) => {
         if (img) observer.unobserve(img);
       });
     };
@@ -56,11 +58,11 @@ const Album = () => {
             key={index}
             data-index={index}
             src={visibleImages.includes(String(index)) ? image : ""}
-            alt="Wedding image"
-            loading="lazy"  
+            alt=""
+            loading="lazy"
             ref={(el) => setImageRef(el, index)}
             style={{
-              transition: "opacity 0.5s ease-in-out", 
+              transition: "opacity 0.5s ease-in-out",
               opacity: visibleImages.includes(String(index)) ? 1 : 0,
             }}
           />

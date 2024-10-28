@@ -9,6 +9,7 @@ import Album from "./Album";
 import Video from "./Video";
 // import Loader from "./Loader";
 import { IoIosArrowUp } from "react-icons/io";
+import Footer from "./Footer";
 
 const Layout = () => {
   // const [loading, setLoading] = useState(true);
@@ -51,20 +52,21 @@ const Layout = () => {
       {/* {loading ? (
         <Loader />
       ) : ( */}
-        <>
-          {showButton && (
-            <button id="scrollToTopButton" onClick={scrollToTop}>
-              <IoIosArrowUp />
-            </button>
-          )}
-          <Header />
-          <Couple />
-          <FormConfirm />
-          <CountDown />
-          <Event />
-          <Video />
-          <Album />
-        </>
+      <>
+        {showButton && (
+          <button id="scrollToTopButton" onClick={scrollToTop}>
+            <IoIosArrowUp />
+          </button>
+        )}
+        <Header />
+        <Couple />
+        <FormConfirm />
+        <CountDown />
+        <Event />
+        <Video />
+        <Album />
+        <Footer />
+      </>
       {/* )} */}
     </div>
   );
