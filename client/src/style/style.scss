@@ -49,9 +49,11 @@ html {
     }
     @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
       left: 360px;
+      z-index: -3;
     }
     @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
       left: 310px;
+      z-index: -3;
     }
   }
   .header {
@@ -527,13 +529,9 @@ html {
         font-size: 32px;
         @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 28px;
-          position: relative;
-          z-index: -10;
         }
         @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           font-size: 28px;
-          position: relative;
-          z-index: -10;
         }
       }
       h2 {
@@ -544,13 +542,9 @@ html {
         line-height: 15px;
         @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 18px;
-          position: relative;
-          z-index: -10;
         }
         @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           font-size: 18px;
-          position: relative;
-          z-index: -10;
         }
       }
       h3 {
@@ -564,13 +558,19 @@ html {
         @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 18px;
           position: relative;
-          z-index: -10;
         }
         @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           font-size: 18px;
           position: relative;
-          z-index: -10;
         }
+      }
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        position: relative;
+        z-index: -10;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        position: relative;
+        z-index: -10;
       }
     }
     svg {
@@ -643,13 +643,9 @@ html {
         font-weight: 300;
         @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 18px;
-          position: relative;
-          z-index: -10;
         }
         @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           font-size: 18px;
-          position: relative;
-          z-index: -10;
         }
       }
       h3 {
@@ -662,14 +658,18 @@ html {
         line-height: 15px;
         @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 18px;
-          position: relative;
-          z-index: -10;
         }
         @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
           font-size: 18px;
-          position: relative;
-          z-index: -10;
         }
+      }
+      @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        position: relative;
+        z-index: -10;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        position: relative;
+        z-index: -10;
       }
     }
     @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
@@ -751,13 +751,13 @@ html {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     position: relative;
-    z-index: -3;
+    z-index: 0;
   }
   @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     position: relative;
-    z-index: -3;
+    z-index: 0;
   }
 }
 .countDown {
@@ -859,41 +859,6 @@ html {
 .event {
   position: relative;
   margin: 70px 0 97px 0;
-  .rose-container {
-    position: absolute;
-    left: -50px;
-    top: 580px;
-    z-index: -10;
-    .roseLeft {
-      width: 700px;
-      height: auto;
-      transition: transform 0.4s ease-in-out;
-      transform: scale(0);
-      transform-origin: bottom left;
-    }
-    .roseLeft.open {
-      transform: scale(1) skewX(-10deg) translate(-50px, 20px);
-    }
-    .roseRight {
-      position: absolute;
-      top: -870px;
-      left: 1429px;
-      width: 470px;
-      height: auto;
-      transition: transform 0.4s ease-in-out;
-      transform: scale(0);
-      transform-origin: top right;
-    }
-    .roseRight.open {
-      transform: scale(1) skewX(0deg) translate(0px, 0px);
-    }
-    @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
-      display: none;
-    }
-    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
-      display: none;
-    }
-  }
   h1 {
     font-size: 48px;
     font-weight: 500;
