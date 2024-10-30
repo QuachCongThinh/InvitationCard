@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Modal } from "react-responsive-modal";
+import React, { useState, useEffect, useRef } from "react";
 import video from "../assets/image/5924219855622.mp4";
 import { CiPlay1 } from "react-icons/ci";
-import "react-responsive-modal/styles.css";
+import { AiOutlineClose } from "react-icons/ai";
+import "../style/style.scss";
 
 const Video = () => {
-  const [open, setOpen] = useState(false);
-  const openModal = () => setOpen(true);
-  const closeModal = () => setOpen(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const popupRef = useRef(null);
+
+  const openPopup = () => setIsPopupOpen(true);
+  const closePopup = () => setIsPopupOpen(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,6 +29,24 @@ const Video = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        closePopup();
+      }
+    };
+
+    if (isPopupOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isPopupOpen]);
+
   return (
     <div className="video">
       <div className="text">
@@ -35,50 +55,29 @@ const Video = () => {
           Tình yêu không làm cho thế giới quay tròn. Tình yêu là những gì làm
           cho chuyến đi đáng giá.
         </p>
-        <button className="play-button" onClick={openModal}>
+        <button className="play-button" onClick={openPopup}>
           <CiPlay1 />
         </button>
       </div>
 
-      <Modal
-        open={open}
-        onClose={closeModal}
-        center
-        styles={{
-          modal: {
-            maxWidth: "100%",
-            width: "68.8%",
-            borderRadius: "10px",
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
-          },
-          closeButton: {
-            color: "black",
-            backgroundColor: "white",
-            border: "none",
-            marginRight: "15px",
-            marginTop: "10px",
-          },
-        }}
-      >
-        <div
-          className="modal-content"
-          style={{
-            width: isFullScreen ? "100vw" : "auto",
-            height: isFullScreen ? "100vh" : "auto",
-          }}
-        >
-          <video
-            controls
-            autoPlay
+      {isPopupOpen && (
+        <div className="popup-overlay">
+          <div
+            className="popup-content"
+            ref={popupRef}
             style={{
-              width: isFullScreen ? "100%" : "100%",
-              height: isFullScreen ? "100%" : "auto",
+              width: isFullScreen ? "100vw" : "70%",
             }}
           >
-            <source src={video} type="video/mp4" />
-          </video>
+            <button className="close-button" onClick={closePopup}>
+              <AiOutlineClose />
+            </button>
+            <video controls autoPlay>
+              <source src={video} type="video/mp4" />
+            </video>
+          </div>
         </div>
-      </Modal>
+      )}
     </div>
   );
 };

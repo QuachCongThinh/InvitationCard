@@ -58,6 +58,10 @@ html {
         font-size: 25px;
         margin-bottom: -5px;
       }
+      @media only screen and (max-device-width: 320px) {
+        font-size: 25px;
+        margin-bottom: -5px;
+      }
     }
     p {
       font-size: 28px;
@@ -68,6 +72,9 @@ html {
       }
       @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
         font-size: 20px;
+      }
+      @media only screen and (max-device-width: 320px) {
+        font-size: 22px;
       }
     }
     .name {
@@ -80,6 +87,9 @@ html {
         font-weight: 700;
         @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
           font-size: 36px;
+        }
+        @media only screen and (max-device-width: 320px) {
+          font-size: 30px;
         }
       }
       svg {
@@ -122,6 +132,9 @@ html {
   @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
     height: 440px;
   }
+  @media only screen and (max-device-width: 320px) {
+    height: 440px;
+  }
 }
 .form {
   text-align: center;
@@ -134,6 +147,9 @@ html {
       font-size: 22px;
     }
     @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      font-size: 23px;
+    }
+    @media only screen and (max-device-width: 320px) {
       font-size: 23px;
     }
   }
@@ -163,6 +179,13 @@ html {
           border: none;
         }
         @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          width: 250px;
+          font-size: 17px;
+          padding: 0px 21px;
+          height: 49px;
+          border: none;
+        }
+        @media only screen and (max-device-width: 320px) {
           width: 250px;
           font-size: 17px;
           padding: 0px 21px;
