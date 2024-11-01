@@ -440,12 +440,15 @@ html {
       @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
         font-size: 90px;
         top: 420px;
+        color: #fff;
       }
       @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
         font-size: 90px;
+        color: #ff0000;
         top: 390px;
       }
       @media only screen and (max-device-width: 320px) {
+        color: #007786;
         font-size: 70px;
         top: 360px;
       }
