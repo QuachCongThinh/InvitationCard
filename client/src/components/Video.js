@@ -15,7 +15,7 @@ const Video = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 425) {
-        setIsFullScreen(true);
+        setIsFullScreen(true);  
       } else {
         setIsFullScreen(false);
       }
