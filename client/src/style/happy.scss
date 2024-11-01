@@ -58,6 +58,12 @@
       @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
         top: 22px;
       }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        top: 22px;
+      }
+      @media only screen and (max-device-width: 320px) {
+        top: 22px;
+      }
     }
     .box-top {
       max-width: 100%;
@@ -83,8 +89,22 @@
           font-size: 25px;
           padding-top: 18px;
         }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          font-size: 25px;
+          padding-top: 18px;
+        }
+        @media only screen and (max-device-width: 320px) {
+          font-size: 25px;
+          padding-top: 18px;
+        }
       }
       @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+        height: 60px;
+      }
+      @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+        height: 60px;
+      }
+      @media only screen and (max-device-width: 320px) {
         height: 60px;
       }
     }
@@ -122,6 +142,16 @@
             box-shadow: rgba(100, 100, 111, 0.589) 0px 7px 29px 0px;
             border-radius: 8px;
             @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+              width: 110px;
+              height: 110px;
+              margin-top: 10px;
+            }
+            @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+              width: 110px;
+              height: 110px;
+              margin-top: 10px;
+            }
+            @media only screen and (max-device-width: 320px) {
               width: 110px;
               height: 110px;
               margin-top: 10px;
@@ -178,18 +208,40 @@
               line-height: 0px;
               margin-top: 18px;
             }
-          }
-          @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
-            width: 320px;
-            height: 390px;
+            @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+              line-height: 0px;
+              margin-top: 18px;
+            }
+            @media only screen and (max-device-width: 320px) {
+              line-height: 0px;
+              margin-top: 18px;
+            }
           }
           @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
             padding: 0 10px;
             height: 320px;
             width: 310px;
           }
+          @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+            padding: 0 10px;
+            height: 320px;
+            width: 260px;
+          }
+          @media only screen and (max-device-width: 320px) {
+            padding: 0 10px;
+            height: 320px;
+            width: 205px;
+          }
         }
         @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+          top: 10px;
+          left: 25px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          top: 10px;
+          left: 25px;
+        }
+        @media only screen and (max-device-width: 320px) {
           top: 10px;
           left: 25px;
         }
@@ -224,6 +276,16 @@
             box-shadow: rgba(100, 100, 111, 0.589) 0px 7px 29px 0px;
             border-radius: 8px;
             @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+              width: 110px;
+              margin-top: 0;
+              height: 110px;
+            }
+            @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+              width: 110px;
+              margin-top: 0;
+              height: 110px;
+            }
+            @media only screen and (max-device-width: 320px) {
               width: 110px;
               margin-top: 0;
               height: 110px;
@@ -280,20 +342,56 @@
               line-height: 0px;
               margin-top: 30px;
             }
+            @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+              line-height: 0px;
+              margin-top: 30px;
+            }
+            @media only screen and (max-device-width: 320px) {
+              line-height: 0px;
+              margin-top: 30px;
+            }
           }
           @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
             padding: 0 10px;
             height: 320px;
             width: 310px;
           }
+          @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+            padding: 0 10px;
+            height: 320px;
+            width: 260px;
+          }
+          @media only screen and (max-device-width: 320px) {
+            padding: 0 10px;
+            height: 320px;
+            width: 205px;
+          }
         }
         @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+          top: 350px;
+          left: 25px;
+        }
+        @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+          top: 350px;
+          left: 25px;
+        }
+        @media only screen and (max-device-width: 320px) {
           top: 350px;
           left: 25px;
         }
       }
     }
     @media only screen and (min-device-width: 376px) and (max-device-width: 480px) {
+      margin: 0 20px;
+      height: 760px;
+      z-index: 100000;
+    }
+    @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
+      margin: 0 20px;
+      height: 760px;
+      z-index: 100000;
+    }
+    @media only screen and (max-device-width: 320px) {
       margin: 0 20px;
       height: 760px;
       z-index: 100000;
